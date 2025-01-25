@@ -135,7 +135,7 @@ prepare(){
   # For EDGE
   # Copy the config file first
   msg "Copy the config file first..."
-  cp "${srcdir}"/linux-"${major}"/CONFIGS/xanmod/gcc/config .config
+  cp "${srcdir}"/linux-"${major}"/CONFIGS/x86_64/config .config
 
   sleep 2s
 
