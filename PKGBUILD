@@ -300,7 +300,7 @@ build(){
 }
 
 _package(){
-  pkgdesc='XanMod kernel and modules - EDGE'
+  pkgdesc='XanMod kernel and modules'
   depends=(
     coreutils
     initramfs
