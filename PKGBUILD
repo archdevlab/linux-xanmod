@@ -34,11 +34,11 @@ fi
 
 ###################################################################################
 
-pkgbase=linux-xanmod-edge
-pkgver=6.11.0.xanmod1
+pkgbase=linux-xanmod
+pkgver=6.13.0.xanmod1
 pkgrel=1
-major=6.11
-versiontag=6.11.0-xanmod1
+major=6.13
+versiontag=6.13.0-xanmod1
 arch=(x86_64)
 url='https://xanmod.org/'
 license=(GPL-2.0-only)
@@ -57,6 +57,7 @@ makedepends=(
   xz
   kmod
   xmlto
+  
   # htmldocs
   graphviz
   imagemagick
@@ -128,8 +129,13 @@ prepare(){
 
   # Copy the config file first
   # Use v1 to support all CPU
+  #msg "Copy the config file first..."
+  #cp "${srcdir}"/linux-"${major}"/CONFIGS/xanmod/gcc/config_x86-64-v1 .config
+
+  # For EDGE
+  # Copy the config file first
   msg "Copy the config file first..."
-  cp "${srcdir}"/linux-"${major}"/CONFIGS/xanmod/gcc/config_x86-64-v1 .config
+  cp "${srcdir}"/linux-"${major}"/CONFIGS/xanmod/gcc/config .config
 
   sleep 2s
 
@@ -302,6 +308,7 @@ _package(){
   )
   optdepends=(
     'wireless-regdb: to set the correct wireless channels of your country'
+    'scx-scheds: to use sched-ext schedulers'
     'linux-firmware: firmware images needed for some devices'
   )
   provides=(
