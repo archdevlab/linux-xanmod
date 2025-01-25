@@ -428,8 +428,8 @@ _package-headers(){
   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"
 }
 
-sha256sums=('55d2c6c025ebc27810c748d66325dd5bc601e8d32f8581d9e77673529bdacb2e'
-            'eabfac5fa947a119f6a7034c2d3fc0d8545a5585e70bcaf7c2f91a3c0f07cb08')
+sha256sums=('e79dcc6eb86695c6babfb07c2861912b635d5075c6cd1cd0567d1ea155f80d6e'
+            'c75c34dc9fea5d6d4804173048225525da305039dfe39c7751ec387a96963586')
 
 pkgname=($pkgbase $pkgbase-headers)
 for _p in "${pkgname[@]}"; do
